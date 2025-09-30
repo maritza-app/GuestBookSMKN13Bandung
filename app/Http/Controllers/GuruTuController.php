@@ -36,7 +36,7 @@ class GuruTuController extends Controller
         'alamat' => 'required|string|max:255',
         'telepon' => 'required|string|max:255',
         'deskripsi' => 'required|string|max:255',
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif',
+        'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:16384',
     ]);
 
     // Proses upload foto

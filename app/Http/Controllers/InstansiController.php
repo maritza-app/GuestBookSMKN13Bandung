@@ -40,7 +40,7 @@ class InstansiController extends Controller
         'tujuan_kepada_guru_tu' => 'required|exists:guru_tu,id_guru_tu',
         'keperluan' => 'required|string',
         'jumlah_pengunjung' => 'required|numeric|min:0',
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif',
+        'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:16384',
     ]);
 
     // Proses upload foto

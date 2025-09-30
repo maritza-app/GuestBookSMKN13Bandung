@@ -40,7 +40,7 @@ class OwController extends Controller
         'telepon_ortu_wali' => 'required|string|max:255',
         'tujuan_kepada_guru_tu' => 'required|exists:guru_tu,id_guru_tu', 
           'keperluan' => 'required|string|max:255',// Pastikan kategori_id valid
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif',
+        'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:16384',
         'id_siswa' => 'required|exists:siswa,id_siswa',  // Validasi gambar
     ]);
 

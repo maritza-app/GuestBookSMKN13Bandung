@@ -91,6 +91,7 @@
             border: 1px solid #ccc;
             border-radius: 8px;
         }
+        
 
         /* Responsive breakpoints */
         @media (max-width: 768px) {
@@ -102,12 +103,12 @@
                 width: 80px !important;
                 max-width: 80px;
             }
-
+/* 
             .form-box {
                 width: 95% !important;
-                margin-top: 30px !important;
+                 margin-top: 30px !important; 
                 padding: 20px !important;
-            }
+            } */
 
             .form-box h1 {
                 font-size: 1.2rem;
@@ -140,7 +141,7 @@
             }
 
             .form-box {
-                margin-top: 20px !important;
+                margin-top: 10px !important;
                 padding: 15px !important;
             }
 

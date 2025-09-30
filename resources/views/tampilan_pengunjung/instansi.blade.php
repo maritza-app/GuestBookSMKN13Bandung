@@ -392,47 +392,44 @@
 
     // ================= CAMERA =================
     const video = document.getElementById('video');
-    const canvas = document.getElementById('canvas');
-    const fotoInput = document.getElementById('foto_base64');
-    const photoPreview = document.getElementById('photoPreview');
+  const canvas = document.getElementById('canvas');
+  const fotoInput = document.getElementById('foto_base64');
+  const photoPreview = document.getElementById('photoPreview');
 
-    // Aktifkan kamera (kompatibel HP + Laptop)
-navigator.mediaDevices.getUserMedia({
-    video: { facingMode: "environment" }, // environment = kamera belakang, user = kamera depan
-    audio: false
-})
-.then(stream => {
-    video.srcObject = stream;
-})
-.catch(err => {
-    alert("Gagal mengakses kamera: " + err.message + 
-          "\nTips: Coba buka dengan HTTPS atau cek izin kamera di browser HP.");
-});
+  // Akses kamera
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => { 
+      video.srcObject = stream; 
+    })
+    .catch(err => { 
+      alert("Gagal mengakses kamera: " + err.message); 
+    });
 
-    // Ambil snapshot
-    function takeSnapshot() {
-        const context = canvas.getContext('2d');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // Ambil foto dari kamera
+  function takeSnapshot() {
+    const context = canvas.getContext('2d');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        const imageData = canvas.toDataURL('image/jpeg');
-        fotoInput.value = imageData;
+    const imageData = canvas.toDataURL('image/jpeg');
+    fotoInput.value = imageData;
 
-        // Preview foto
-        photoPreview.src = imageData;
-        photoPreview.style.display = 'block';
-        document.getElementById('noPhoto').style.display = 'none';
+    // Tampilkan preview foto dan sembunyikan placeholder
+    photoPreview.src = imageData;
+    photoPreview.style.display = 'block';
+    document.getElementById('noPhoto').style.display = 'none';
+  }
+
+  // Cek sebelum submit
+  function prepareSnapshot() {
+    if (!fotoInput.value) {
+      alert("Silakan ambil foto terlebih dahulu.");
+      return false;
     }
-
-    // Validasi sebelum submit
-    function prepareSnapshot() {
-        if (!fotoInput.value) {
-            alert("Silakan ambil foto terlebih dahulu.");
-            return false;
-        }
-        return true;
-    }
+    return true;
+  }
+ 
 
     
 

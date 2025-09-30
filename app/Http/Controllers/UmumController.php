@@ -43,7 +43,7 @@ class UmumController extends Controller
         'tujuan_kepada_siswa' => 'nullable|exists:siswa,id_siswa',
         'keperluan' => 'required|string',
         'jumlah_pengunjung' => 'required|numeric|min:0',
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'foto' => 'required|image|mimes:jpeg,png,jpg,gif',
     ]);
 
     // proses upload foto

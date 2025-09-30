@@ -64,7 +64,7 @@ class DokumentasiController extends Controller
             'kategori_tamu' => 'required|in:Instansi,Sekolah,Lainnya',
             'keterangan_tamu' => 'required|string|max:255',
             'keterangan_kegiatan' => 'required|string',
-            'dokumentasi' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'dokumentasi' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         $imageName = $request->old_dokumentasi;

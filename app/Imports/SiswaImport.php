@@ -30,14 +30,16 @@ class SiswaImport implements ToModel, WithHeadingRow, WithCalculatedFormulas
     return new Siswa([
         'nis'              => (int) $row['nis'], // pastikan integer
         'nama_siswa'       => $row['nama_siswa'] ?? null,
+        'alamat_siswa'     => null,
         'jenis_kelamin'    => $row['l/p'] ?? $row['lp'] ?? null,
         'kelas'            => $row['kls'] ?? null,
         'jurusan'          => $jurusan,
-        'nama_ortu_wali'   => null,
+         'telepon_siswa'    => null,
+        'nama_ayah'   => null,
+          'nama_ibu'   => null,
+            'nama_wali'   => null,
         'alamat_ortu_wali' => null,
         'telepon_ortu_wali'=> null,
-        'alamat_siswa'     => null,
-        'telepon_siswa'    => null,
     ]);
 }
 

@@ -30,9 +30,12 @@
         }
 
         .form-box {
-            background: #e79e85;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+           background: #e79e85;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;   /* di desktop form nggak terlalu lebar */
         }
 
         .form-box h1 {
@@ -194,7 +197,7 @@
   </div>
 
   <!-- Form Box -->
-  <div class="form-box mx-auto p-4" style="width:80%; max-width: 1000px; background:#e79e85; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-top:50px;">
+  <div class="form-box mx-auto p-4">
     <h1 class="mb-4 text-center">FORM DATA KUNJUNGAN UMUM<br>SMKN 13 BANDUNG</h1>
 
     <form action="{{ route('tampil_pengunjung.storeUmum') }}" method="POST" enctype="multipart/form-data" onsubmit="return prepareSnapshot()">

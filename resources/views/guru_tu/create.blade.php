@@ -156,6 +156,7 @@
    <div class="mb-3">
                             <label for="foto" class="form-label">Foto</label>
                             <input type="file" name="foto" class="form-control" required>
+                            <p>maximal ukuran foto 2Mb</p>
                         </div>
                     
                         <button type="submit" class="btn btn-primary">Simpan</button>

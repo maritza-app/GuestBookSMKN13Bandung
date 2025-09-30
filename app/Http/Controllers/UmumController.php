@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Umum;
-use App\Models\Guru_Tu;
+use App\Models\GuruTU;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 
@@ -24,7 +24,7 @@ class UmumController extends Controller
     public function create()
     {
         $siswa = Siswa::all();
-         $guru_tu = Guru_Tu::all();
+         $guru_tu = GuruTU::all();
         return view('umum.create', compact('guru_tu','siswa')); //
     }
 
@@ -87,7 +87,7 @@ class UmumController extends Controller
     {
         
         $umum = Umum::where('id_kunjungan_umum', $id_kunjungan_umum)->firstOrFail();
-        $guru_tu = Guru_Tu::all();
+        $guru_tu = GuruTU::all();
         $siswa = Siswa::all();  //
          return view('umum.edit', compact('umum', 'guru_tu','siswa'));//
     }

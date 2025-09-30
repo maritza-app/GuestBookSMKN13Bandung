@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Instansi;
-use App\Models\Guru_Tu;
+use App\Models\GuruTU;
 use Illuminate\Http\Request;
 
 class InstansiController extends Controller
@@ -22,7 +22,7 @@ class InstansiController extends Controller
      */
     public function create()
     {
-         $guru_tu = Guru_Tu::all();
+         $guru_tu = GuruTU::all();
         return view('instansi.create', compact('guru_tu')); //
     }
 
@@ -73,7 +73,7 @@ class InstansiController extends Controller
     public function edit($id_kunjungan_instansi)
     {
         $instansi = instansi::where('id_kunjungan_instansi', $id_kunjungan_instansi)->firstOrFail();
-        $guru_tu = Guru_Tu::all(); //
+        $guru_tu = GuruTU::all(); //
          return view('instansi.edit', compact('instansi', 'guru_tu'));
     }
 

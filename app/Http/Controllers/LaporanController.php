@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Pengguna;
 // use App\Models\Resep;
 use App\Models\Dokumentasi;
-use App\Models\Guru_Tu;
+use App\Models\GuruTU;
 use App\Models\Siswa;
 use App\Models\Instansi;
 use App\Models\Ow;
@@ -69,7 +69,7 @@ class LaporanController extends Controller
     public function guru_tu(Request $request)
     {
         $search = $request->input('search');
-        $query = Guru_Tu::query();
+        $query = GuruTU::query();
         if ($search) {
             $query->where('nama_guru_tu', 'like', "%$search%")
                   ->orWhere('nip', 'like', "%$search%");

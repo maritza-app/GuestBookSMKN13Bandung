@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Guru_TU extends Model
+class GuruTU extends Model
 {
    protected $table = 'guru_tu'; // Nama tabel yang benar
  protected $primaryKey = 'id_guru_tu'; 

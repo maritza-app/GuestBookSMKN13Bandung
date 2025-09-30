@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Guru_Tu;
+use App\Models\GuruTU;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class GuruTuController extends Controller
@@ -12,7 +12,7 @@ class GuruTuController extends Controller
      */
     public function index()
     {
-        $guru_tu = Guru_Tu::all(); // Ambil semua data kategori
+        $guru_tu = GuruTU::all(); // Ambil semua data kategori
         return view('guru_tu.index', compact('guru_tu'));// //
     }
 
@@ -48,7 +48,7 @@ class GuruTuController extends Controller
     }
 
     // Menyimpan data sparepart ke database
-    Guru_Tu::create([
+    GuruTU::create([
         'nip' => $request->nip,
         'nama_guru_tu' => $request->nama_guru_tu,
         'jk' => $request->jk,
@@ -75,7 +75,7 @@ class GuruTuController extends Controller
      */
     public function edit($id_guru_tu)
     {
-        $guru_tu = Guru_Tu::findOrFail($id_guru_tu);
+        $guru_tu = GuruTU::findOrFail($id_guru_tu);
     return view('guru_tu.edit', compact('guru_tu'));
     }
 
@@ -84,7 +84,7 @@ class GuruTuController extends Controller
      */
     public function update(Request $request, $id_guru_tu)
     {
-         $guru_tu = Guru_Tu::where('id_guru_tu', $id_guru_tu)->firstOrFail();
+         $guru_tu = GuruTU::where('id_guru_tu', $id_guru_tu)->firstOrFail();
 
         $request->validate([
             
@@ -125,7 +125,7 @@ class GuruTuController extends Controller
     ->update(['tujuan_kepada_guru_tu' => NULL]);
 
     // Baru hapus guru_tu
-    $guru_tu = Guru_Tu::findOrFail($id_guru_tu);
+    $guru_tu = GuruTU::findOrFail($id_guru_tu);
     $guru_tu->delete();
 
     return redirect()->route('guru_tu.index')->with('success', 'Data berhasil dihapus');

@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Guru_TU;
+use App\Models\GuruTU;
 use App\Models\Siswa;
 use App\Models\Ow;
 use App\Models\Instansi;
@@ -19,20 +19,20 @@ class TamuController extends Controller
 
     public function instansi()
     {
-        $guruTus = Guru_TU::all();
+        $guruTus = GuruTU::all();
         return view('tampilan_pengunjung.instansi', compact('guruTus'));
     }
 
    public function ortu()
 {
-    $guruTus = Guru_TU::all();
+    $guruTus = GuruTU::all();
     $siswaList = Siswa::all();
     return view('tampilan_pengunjung.ortu', compact('guruTus', 'siswaList'));
 
 }
 public function umum()
 {
-    $guruTus = Guru_TU::select('id_guru_tu', 'nama_guru_tu', 'foto')->get();
+    $guruTus = GuruTU::select('id_GuruTU', 'nama_GuruTU', 'foto')->get();
     $siswaList = Siswa::all();
     return view('tampilan_pengunjung.umum', compact('guruTus', 'siswaList'));
 
@@ -47,7 +47,7 @@ public function umum()
             'id_siswa' => 'required|exists:siswa,id_siswa',
             'alamat_ortu_wali' => 'required|string',
             'telepon_ortu_wali' => 'required|string',
-            'tujuan_kepada_guru_tu' => 'required|exists:guru_tu,id_guru_tu',
+            'tujuan_kepada_GuruTU' => 'required|exists:GuruTU,id_GuruTU',
             'keperluan' => 'required|string',
             'foto_base64' => 'required|string'
         ]);
@@ -59,7 +59,7 @@ public function umum()
         $data->id_siswa = $request->id_siswa;
         $data->alamat_ortu_wali = $request->alamat_ortu_wali;
         $data->telepon_ortu_wali = $request->telepon_ortu_wali;
-        $data->tujuan_kepada_guru_tu = $request->tujuan_kepada_guru_tu;
+        $data->tujuan_kepada_GuruTU = $request->tujuan_kepada_GuruTU;
         $data->keperluan = $request->keperluan;
 
         // Proses simpan foto base64
@@ -84,7 +84,7 @@ public function umum()
            'nama_instansi' => 'required|string',
             'alamat_instansi' => 'required|string',
             'telepon_instansi_pengunjung' => 'required|string',
-            'tujuan_kepada_guru_tu' => 'required|exists:guru_tu,id_guru_tu',
+            'tujuan_kepada_GuruTU' => 'required|exists:GuruTU,id_GuruTU',
             'keperluan' => 'required|string',
              'jumlah_pengunjung'=>'required|numeric|min:0',
             'foto_base64' => 'required|string'
@@ -97,7 +97,7 @@ public function umum()
         $data->nama_instansi = $request->nama_instansi;
         $data->alamat_instansi = $request->alamat_instansi;
         $data->telepon_instansi_pengunjung = $request->telepon_instansi_pengunjung;
-        $data->tujuan_kepada_guru_tu = $request->tujuan_kepada_guru_tu;
+        $data->tujuan_kepada_GuruTU = $request->tujuan_kepada_GuruTU;
         $data->keperluan = $request->keperluan;
  $data->jumlah_pengunjung = $request->jumlah_pengunjung;
         // Proses simpan foto base64
@@ -122,7 +122,7 @@ public function umum()
            'berkunjung_sebagai' => 'required|string',
             'alamat' => 'required|string',
             'nomor_telepon' => 'required|string',
-            'tujuan_kepada_guru_tu' => 'nullable|exists:guru_tu,id_guru_tu',
+            'tujuan_kepada_GuruTU' => 'nullable|exists:GuruTU,id_GuruTU',
              'tujuan_kepada_siswa' => 'nullable|exists:siswa,id_siswa',
             'keperluan' => 'required|string',
              'jumlah_pengunjung'=>'required|numeric|min:0',
@@ -136,7 +136,7 @@ public function umum()
         $data->berkunjung_sebagai = $request->berkunjung_sebagai;
         $data->alamat = $request->alamat;
         $data->nomor_telepon = $request->nomor_telepon;
-        $data->tujuan_kepada_guru_tu = $request->tujuan_kepada_guru_tu;
+        $data->tujuan_kepada_GuruTU = $request->tujuan_kepada_GuruTU;
         $data->tujuan_kepada_siswa = $request->tujuan_kepada_siswa;
         $data->keperluan = $request->keperluan;
          $data->jumlah_pengunjung = $request->jumlah_pengunjung;

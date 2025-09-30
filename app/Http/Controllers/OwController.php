@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ow;
 use App\Models\Siswa;
-use App\Models\Guru_Tu;
+use App\Models\GuruTU;
 use Illuminate\Http\Request;
 
 class OwController extends Controller
@@ -24,7 +24,7 @@ class OwController extends Controller
     public function create()
     {
         $siswa = Siswa::all();
-        $guru_tu = Guru_Tu::all();
+        $guru_tu = GuruTU::all();
         return view('ortu_wali.create', compact('siswa', 'guru_tu'));
     }
 
@@ -76,7 +76,7 @@ class OwController extends Controller
     {
         $ow = Ow::where('id_kunjungan_ow', $id_kunjungan_ow)->firstOrFail();
         $siswa = Siswa::all();
-        $guru_tu = Guru_Tu::all();
+        $guru_tu = GuruTU::all();
         return view('ortu_wali.edit', compact('ow', 'siswa', 'guru_tu'));
     }
 

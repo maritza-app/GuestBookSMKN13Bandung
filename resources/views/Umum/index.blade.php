@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Kunjungan Orang Tua/Wali</title>
+    <title>Data kunjungan Orang Tua/Wali</title>
     <link rel="icon" type="image/png" href="{{ asset('images/logobukutamu.png') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script src="{{ asset('js/script.js') }}"></script>

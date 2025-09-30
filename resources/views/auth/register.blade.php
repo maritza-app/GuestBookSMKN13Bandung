@@ -63,6 +63,7 @@
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
 </div>
+<p>8 karakter dengan menggunakan simbol</p>
 
 <!-- Konfirmasi Password -->
 <div class="mb-3">

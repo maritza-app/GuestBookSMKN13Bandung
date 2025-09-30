@@ -278,7 +278,7 @@ td img {
                     <input type="file" name="file" required>
                     <button type="submit" class="btn-add mb-3">📥 Import Excel</button>
                 </form>
-                 <a href="{{ asset('format/Format Import Data Siswa.xlsx') }}" class="btn-add mb-3">
+                 <a href="{{ asset('format/Format Import Data Siswa-1.xlsx') }}" class="btn-add mb-3">
         📑 Contoh Format Import
     </a>
 

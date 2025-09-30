@@ -35,9 +35,9 @@ class OwController extends Controller
     {
          $request->validate([
          'tanggal_kunjungan_ow' => 'required|date',
-        'nama_ortu_wali' => 'nullable|string|max:100',
-        'alamat_ortu_wali' => 'nullable|string|max:255',
-        'telepon_ortu_wali' => 'nullable|string|max:255',
+        'nama_ortu_wali' => 'required|string|max:100',
+        'alamat_ortu_wali' => 'required|string|max:255',
+        'telepon_ortu_wali' => 'required|string|max:255',
         'tujuan_kepada_guru_tu' => 'required|exists:guru_tu,id_guru_tu', 
           'keperluan' => 'required|string|max:255',// Pastikan kategori_id valid
         'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',

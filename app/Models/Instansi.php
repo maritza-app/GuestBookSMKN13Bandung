@@ -11,6 +11,6 @@ class Instansi extends Model
     protected $fillable = ['id_kunjungan_instansi', 'tanggal_kunjungan_instansi','nama_pengunjung','nama_instansi','alamat_instansi','telepon_instansi_pengunjung','tujuan_kepada_guru_tu','keperluan','jumlah_pengunjung','foto'];//
      public function guru_tu()
     {
-        return $this->belongsTo(Guru_Tu::class, 'tujuan_kepada_guru_tu', 'id_guru_tu');
+        return $this->belongsTo(GuruTU::class, 'tujuan_kepada_guru_tu', 'id_guru_tu');
     }
 }

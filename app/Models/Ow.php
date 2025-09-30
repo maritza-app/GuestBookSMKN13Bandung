@@ -32,6 +32,6 @@ class Ow extends Model
 
     public function guru_tu()
     {
-        return $this->belongsTo(Guru_Tu::class, 'tujuan_kepada_guru_tu', 'id_guru_tu');
+        return $this->belongsTo(GuruTU::class, 'tujuan_kepada_guru_tu', 'id_guru_tu');
     }
 }

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Form Kunjungan Umum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu Digital</title>
     <link rel="icon" type="image/png" href="{{ asset('images/logobukutamu.png') }}">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Select2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -14,10 +14,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
-    
     <style>
-       body {
+        body {
             font-family: 'Poppins', sans-serif;
             background: #EACEB4;
             min-height: 100vh;
@@ -30,12 +28,9 @@
         }
 
         .form-box {
-           background: #e79e85;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-top: 50px;
-    width: 100%;
-    max-width: 800px;   /* di desktop form nggak terlalu lebar */
+            background: #e79e85;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .form-box h1 {
@@ -197,7 +192,7 @@
   </div>
 
   <!-- Form Box -->
-  <div class="form-box mx-auto p-4">
+  <div class="form-box mx-auto p-4" style="width:80%; max-width: 1000px; background:#e79e85; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-top:50px;">
     <h1 class="mb-4 text-center">FORM DATA KUNJUNGAN UMUM<br>SMKN 13 BANDUNG</h1>
 
     <form action="{{ route('tampil_pengunjung.storeUmum') }}" method="POST" enctype="multipart/form-data" onsubmit="return prepareSnapshot()">
@@ -318,9 +313,7 @@
 <div style="height: 50px;"></div>
 
 <script>
-  
-    // ================= TANGGAL OTOMATIS =================
-    document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const year = now.getFullYear();
         const month = String(now.getMonth() + 1).padStart(2, '0');
@@ -329,6 +322,14 @@
         const minutes = String(now.getMinutes()).padStart(2, '0');
         const formatted = `${year}-${month}-${day}T${hours}:${minutes}`;
         document.getElementById('tanggal_kunjungan').value = formatted;
+    });
+  
+  $(document).ready(function() {
+        $('#tujuan_kepada_siswa').select2({
+            placeholder: "-- pilih siswa --",
+            allowClear: true,
+            width: '100%'
+        });
     });
   const guruTus = @json($guruTus->map(function($guru) {
         return [
@@ -418,14 +419,9 @@
             hiddenInput.value = '';
         }
     });
- $(document).ready(function() {
-        $('#tujuan_kepada_siswa').select2({
-            placeholder: "-- pilih siswa --",
-            allowClear: true,
-            width: '100%'
-        });
-    });
-const video = document.getElementById('video');
+
+    // ================= CAMERA =================
+   const video = document.getElementById('video');
   const canvas = document.getElementById('canvas');
   const fotoInput = document.getElementById('foto_base64');
   const photoPreview = document.getElementById('photoPreview');
@@ -464,9 +460,10 @@ const video = document.getElementById('video');
     return true;
   }
 
-  
- 
+    // ================= TANGGAL OTOMATIS =================
+   
 </script>
+
 
 </body>
 </html>

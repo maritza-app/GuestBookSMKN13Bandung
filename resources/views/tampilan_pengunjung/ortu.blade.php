@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Form Kunjungan Orang Tua</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu Digital</title>
     <link rel="icon" type="image/png" href="{{ asset('images/logobukutamu.png') }}">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Select2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+ <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
-    
+    <!-- CSS Custom -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -30,12 +28,9 @@
         }
 
         .form-box {
-           background: #e79e85;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-top: 50px;
-    width: 100%;
-    max-width: 800px;   /* di desktop form nggak terlalu lebar */
+            background: #e79e85;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .form-box h1 {
@@ -93,7 +88,6 @@
             height: auto;
             border: 1px solid #ccc;
             border-radius: 8px;
-
         }
         
 
@@ -182,7 +176,7 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
@@ -198,12 +192,12 @@
   </div>
 
   <!-- Form Box -->
-  <div class="form-box mx-auto p-4">
+  <div class="form-box mx-auto p-4" style="width:80%; max-width: 1000px; background:#e79e85; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-top:10px;">
     <h1 class="mb-4 text-center">FORM DATA KUNJUNGAN ORTU/WALI<br>SMKN 13 BANDUNG</h1>
-    <form action="{{ route('tampil_pengunjung.storeOrtu') }}" method="POST" enctype="multipart/form-data" onsubmit="return prepareSnapshot()">
-        @csrf
 
-        <div class="mb-3">
+    <form action="{{ route('tampil_pengunjung.storeOrtu') }}" method="POST" enctype="multipart/form-data" onsubmit="return prepareSnapshot()">
+      @csrf
+ <div class="mb-3">
             <label for="tanggal_kunjungan_ow" class="form-label">Tanggal Kunjungan</label>
             <input type="datetime-local" name="tanggal_kunjungan_ow" id="tanggal_kunjungan_ow" class="form-control" readonly>
         </div>
@@ -465,8 +459,6 @@
   }
  
 </script>
-
-<!-- jQuery & Select2 -->
 
 
 

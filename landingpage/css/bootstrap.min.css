@@ -1,0 +1,33 @@
+/*!
+ * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+*/
+:root{
+    --bs-primary: #BB5A5A;   /* Merah tua lembut */
+    --bs-secondary: #E79E85; /* Peach */
+    --bs-light: #F2E9D0;     /* Krem muda */
+    --bs-dark: #EACEB4;      /* Beige hangat */
+}
+
+.hero-header {
+  background: linear-gradient(to right, #F2E9D0, #EACEB4) !important;
+  color: #BB5A5A !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-header h1,
+.hero-header h5,
+.hero-header a {
+  color: #BB5A5A !important;
+}
+
+.hero-header h5 {
+  border-color: #E79E85 !important;
+}
+
+.hero-header a:hover {
+  color: #E79E85 !important;
+}

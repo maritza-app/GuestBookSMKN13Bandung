@@ -39,7 +39,7 @@
         👨‍👩‍👧 Orang Tua Siswa/Wali Siswa
     </a>
     <a href="{{ route('tampil_pengunjung.umum') }}" class="btn d-inline-block w-auto">
-        👥 Pengunjung Sekolah Umum
+        👥 Pengunjung Umum
     </a>
 </div>
 

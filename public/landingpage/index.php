@@ -25,10 +25,6 @@ $umum_query = mysqli_query($conn, "
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Custom Style -->
-<style>
-   
-</style>
 <head>
     <meta charset="utf-8">
     <title>Guest Book</title>
@@ -99,45 +95,49 @@ $umum_query = mysqli_query($conn, "
     </div>
     <!-- Navbar End -->
 
-    <!-- Hero Start -->
-    
-    <div class="container-fluid pb-5 hero-header bg-light mb-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center mb-5">
-                <div class="col-lg-6">
+  <!-- Hero Start -->
+<div class="container-fluid pb-5 hero-header mb-5"
+  style="
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh !important;
+  ">
 
+  <div class="container py-5 text-center">
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-6">
         <h1 class="display-1 mb-4 animated slideInRight">
-                        Welcome to the Digital <span class="text-primary">Guest Book</span> of SMKN 13 Bandung
-                    </h1>
-                    <h5 class="d-inline-block border border-2 border-white py-3 px-5 mb-0 animated slideInRight">
-                        – We’re glad you’re here!
-                    </h5>
-                </div>
-                <div class="col-lg-6">
-                    <div class="owl-carousel header-carousel animated fadeIn">
-                        <img class="img-fluid" src="img/gedung.jpg" alt="">
-                        <img class="img-fluid" src="img/lapangan.jpg" alt="">
-                        <img class="img-fluid" src="img/acara.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-5 animated fadeIn">
-                <div class="col-md-6 col-lg-3">
-                    <div class="col-md-8 col-lg-6 mx-auto">
-  <div class="visit-box">
-  <i class="fa fa-robot"></i>
-  <h5>Ingin Berkunjung?</h5>
-  <a href="https://guestbook.cludz.net/">Klik Disini</a>
-</div>
-
-</div>
-
-                </div>
-            </div>
+          Welcome to the Digital <span class="text-primary">Guest Book</span> of SMKN 13 Bandung
+        </h1>
+        <h5 class="d-inline-block border border-2 border-white py-3 px-5 mb-0 animated slideInRight">
+          – We’re glad you’re here!
+        </h5>
+      </div>
+      <div class="col-lg-6">
+        <div class="owl-carousel header-carousel animated fadeIn">
+          <img class="img-fluid" src="img/gedung.jpg" alt="">
+          <img class="img-fluid" src="img/lapangan.jpg" alt="">
+          <img class="img-fluid" src="img/acara.jpg" alt="">
         </div>
+      </div>
     </div>
-    <!-- Hero End -->
+
+    <div class="row g-5 animated fadeIn">
+      <div class="col-md-6 col-lg-3">
+        <div class="col-md-8 col-lg-6 mx-auto">
+          <div class="visit-box">
+            <i class="fa fa-robot"></i>
+            <h5>Ingin Berkunjung?</h5>
+            <a href="https://guestbook.cludz.net/">Klik Disini</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hero End -->
+
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -181,16 +181,16 @@ $umum_query = mysqli_query($conn, "
                     </div>
 
                     <div class="d-flex align-items-center mt-5">
-                       <a class="btn px-4 me-2 custom-btn" href="#!">Our Social Media</a>
-                        <a class="btn btn-outline-dark btn-square border-2 me-2"
+                        <a class="btn btn-primary px-4 me-2" href="#!">Our Social Media</a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2"
                             href="https://www.facebook.com/share/16na1HPQar/?mibextid=qi2Omg">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="btn btn-outline-dark btn-square border-2 me-2"
+                        <a class="btn btn-outline-success btn-square border-2 me-2"
                             href="https://whatsapp.com/channel/0029VaB6PhyIyPtbCOckow0I" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a class="btn btn-outline-dark btn-square border-2 me-2"
+                        <a class="btn btn-outline-primary btn-square border-2 me-2"
                             href="https://www.instagram.com/smkn13bandung?igsh=YXkybTd5aGVwOTN3">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -205,7 +205,6 @@ $umum_query = mysqli_query($conn, "
 <div class="container-fluid bg-light py-5">
   <div class="container py-5">
     <h1 class="section-title mb-5 text-center">
-      
   Our Professional <span class="text-uppercase text-primary bg-light px-2">Developments</span>
 </h1>
 
@@ -218,11 +217,11 @@ $umum_query = mysqli_query($conn, "
             <small class="mb-2 fw-bold">Full Stack</small>
             <h4 class="lh-base text-light">Maritza</h4>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://www.instagram.com/maritzrw?utm_source=qr">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=maritza.rievani11@smk.belajar.id" target="_blank">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -238,11 +237,11 @@ $umum_query = mysqli_query($conn, "
             <small class="mb-2 fw-bold">UI/UX</small>
             <h4 class="lh-base text-light">Fitria</h4>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://www.instagram.com/xfttriarmdy_?igsh=YWcxMDVnMzI4eWdy">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=fitria.ramadani3658@smk.belajar.id" target="_blank">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -258,11 +257,11 @@ $umum_query = mysqli_query($conn, "
             <small class="mb-2 fw-bold">Dokumentasi</small>
             <h4 class="lh-base text-light">Nazwa</h4>
             <div class="d-flex justify-content-center">
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://www.instagram.com/xyrnzwaa_?igsh=YmZ5aXJ5ZWRsMXhj">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a class="btn btn-outline-dark btn-square border-2 me-2"
+              <a class="btn btn-outline-primary btn-sm-square border-2 me-2"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=xyrnzwaa@gmail.com" target="_blank">
                 <i class="fas fa-envelope"></i>
               </a>
@@ -387,17 +386,13 @@ $umum_query = mysqli_query($conn, "
 
 
 <!-- Footer Start -->
-<div class="container-fluid footer pt-5"
-  style="
-    background-color: #ffdbce; /* pink muda */
-    color: #000000; /* teks hitam */
-  ">
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
   <div class="container py-5">
     <div class="row g-5">
 
       <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="d-inline-block mb-3">
-          <h1 class="text-dark">Guest Book 13</h1>
+          <h1 class="text-white">Guest Book 13</h1>
         </a>
         <p class="mb-0">
           Dengan Guest Book 13, semua data tamu tercatat secara akurat hanya dalam hitungan detik.
@@ -406,15 +401,16 @@ $umum_query = mysqli_query($conn, "
       </div>
 
       <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-        <h5 class="mb-4">Get In Touch</h5>
+        <h5 class="text-white mb-4">Get In Touch</h5>
         <p><i class="fa fa-map-marker-alt me-3"></i>JL. SOEKARNO-HATTA KM. 10 BANDUNG</p>
         <p><i class="fa fa-phone-alt me-3"></i>0227318960</p>
         <p><i class="fa fa-envelope me-3"></i>smk13bdg@gmail.com</p>
         <div class="d-flex pt-2">
-          <a class="btn btn-outline-dark btn-square border-2 me-2 social-icon" href="https://x.com/smkn13bdg"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-outline-dark btn-square border-2 me-2 social-icon" href="https://www.facebook.com/smkn13bdg2/"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-dark btn-square border-2 me-2 social-icon" href="www.youtube.com/@smkn13bandungofficial"><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-outline-dark btn-square border-2 me-2 social-icon" href="https://www.instagram.com/smkn13bandung?igsh=YXkybTd5aGVwOTN3"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://x.com/smkn13bdg"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://www.facebook.com/smkn13bdg2/"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-outline-primary btn-square border-2 me-2" href="www.youtube.com/@smkn13bandungofficial"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://www.instagram.com/smkn13bandung?igsh=YXkybTd5aGVwOTN3"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-outline-primary btn-square border-2 me-2" href="https://www.tiktok.com/@smkn13bandungofficial?_t=ZS-90B0MwVAYJG&_r=1"><i class="fab fa-tiktok"></i></a>
           
         </div>
       </div>
@@ -436,7 +432,7 @@ $umum_query = mysqli_query($conn, "
 
 
 <!-- Back to Top -->
-<a href="#!" class="btn btn-lg btn-lg-square back-to-top">
+<a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top">
   <i class="bi bi-arrow-up"></i>
 </a>
 

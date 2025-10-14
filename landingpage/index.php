@@ -128,7 +128,7 @@ $umum_query = mysqli_query($conn, "
   <div class="visit-box">
   <i class="fa fa-robot"></i>
   <h5>Ingin Berkunjung?</h5>
-  <a href="https://guestbook.cludz.net/">Klik Disini</a>
+  <a href="https://form-guestbook.cludz.net/">Klik Disini</a>
 </div>
 
 </div>

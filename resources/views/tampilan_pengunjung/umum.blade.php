@@ -213,7 +213,6 @@
       <div class="mb-3 text-start">
         <label>Berkunjung Sebagai</label>
         <input type="text" placeholder="Contoh: Alumni, Sekolah lain, dll" autocomplete="off" class="form-control">
-        <input type="text" class="form-control" name="berkunjung_sebagai" required>
       </div>
 
       <div class="mb-3 text-start">
